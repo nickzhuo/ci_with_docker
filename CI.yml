@@ -1,3 +1,13 @@
+#反向代理nginx
+nginx:
+  image: daocloud.io/daocloud/nginx-proxy:0.3.6
+  privileged: false
+  restart: always
+  ports:
+  - 80:80
+  volumes:
+  - /var/run/docker.sock:/tmp/docker.sock:ro
+
 #jenkins全套
 jenkins:
  image: jenkins
